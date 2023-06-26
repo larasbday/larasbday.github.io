@@ -17,12 +17,17 @@
   <h1>Laras Riddle</h1>
   <input type="text" id="fname" name="fname">
   <input type="submit" id="send" value="Send">
+  <h2 id="err"></h2>
   <img id="map" src="./img.png" />
   <script>
     document.getElementById("send").onclick = function() {
-      if(document.getElementById("fname").value.toLowerCase() == "bsmkal") {
+      let v = document.getElementById("fname").value;
+      if(v.toLowerCase() == "bsmkal") {
         document.getElementById("map").className = "view";
-      } 
+        document.getElementById("err").innerText = ``;
+      } else {
+        document.getElementById("err").innerText = `"${v}" is not correct`;
+      }
     }
   </script>
 </body>
