@@ -1,1 +1,29 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset=utf-8>
+  <title></title>
+<style>
+  img {
+    display: none;
+  }
+  .view {
+    display: block !important;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Laras Riddle</h1>
+  <input type="text" id="fname" name="fname">
+  <input type="submit" id="send" value="Send">
+  <img id="map" src="./img.png" />
+  <script>
+    document.getElementById("send").onclick = function() {
+      if(document.getElementById("fname").value.toLowerCase() == "bsmkal") {
+        document.getElementById("map").className = "view";
+      } 
+    }
+  </script>
+</body>
+</html>
